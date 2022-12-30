@@ -29,12 +29,8 @@ a {
     text-decoration: none;
 }
 
-.subtitle {
-    font-size: 1rem;
-}
-
-.route-a {
-    text-decoration: underline;
+.fw-300 {
+    font-weight: 300;
 }
 
 .fw-400 {
@@ -43,6 +39,14 @@ a {
 
 .fw-700{
     font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1rem;
+}
+
+.route-a {
+    text-decoration: underline;
 }
 
 /* ==========
@@ -68,6 +72,9 @@ Layout
     flex-direction: column;
 }
 
+.container-form {
+    margin-bottom: 2rem;
+}
 
 header {
     padding: 2em 0;
@@ -87,6 +94,11 @@ main {
 
 .new-route {
     font-size: 1.5rem;
+}
+
+.sublabel {
+    margin: 2em 0;
+    font-size: .75rem;
 }
 
 footer {

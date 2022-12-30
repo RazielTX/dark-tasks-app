@@ -1,0 +1,14 @@
+<%- include('./partials/_header.ejs') %>
+        
+        <div class="container container-flex">
+            <h2>Unlimited Power <%=name%>! Welcome to the Dark Side!</h2>
+            <p>You are being redirected to the <a class="route-a fw-400" href="/access">Access</a> page.</p>
+        </div>
+
+        <script>
+            setTimeout(function () {
+                window.location = "/access";
+            }, 5000)
+        </script>
+
+<%- include('./partials/_footer.ejs') %>

@@ -1,20 +1,19 @@
 import { pool } from "../db.js";
 
 export const accessLanding = (req, res) => {
-    console.log('Ready to sign in');
-    res.send('Access page');
+    res.render('access');
 }
 
 export const registerLanding = (req, res) => {
-    console.log('Ready to create user');
-    res.send('Page to create user');
+    res.render('register');
 }
 
 export const verify = async (req, res) => {
 
     try {
         
-        const {nickname} = req.body;
+        const {nickname} = req.query;
+        console.log(nickname);
         const [result] = await pool.query('SELECT user_id FROM users WHERE nickname = ?', [nickname]);
         if(result.length > 0) {
             const user_id = JSON.stringify(result[0].user_id);
@@ -48,10 +47,13 @@ export const createUser = async (req, res) => {
             const [result] = await pool.query(
                 'INSERT INTO users (name, nickname) VALUES (?, ?)',
                 [name, nickname]);
-            return res.send(result);
+            console.log(result);
+            return res.render('register_success', {
+                name
+            });
         }
    
-        res.send('This nickname already exists. Please try another one');
+        res.render('register_failed');
 
     } catch {
         

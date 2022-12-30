@@ -18,6 +18,7 @@ app.set('view engine', 'ejs');
 
 app.use(morgan('dev')); // Just for dev purposes - Comment when no needed
 app.use(express.static(join(__dirname, 'public')));
+app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // Middlewares - Routers

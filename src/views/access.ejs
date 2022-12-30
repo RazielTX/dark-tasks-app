@@ -1,0 +1,16 @@
+<%- include('./partials/_header.ejs') %>
+        
+        <div class="container container-flex">
+            <h2></h2>
+            <form class="container-flex container-form" action="/verify" method="GET">
+                <label class="form-label fw-400" for="nickname">Nickname*</label>
+                <input type="text" name="nickname" required minlength="3">
+                <p class="fw-300 sublabel">*It is not case sensitive</p>
+                <input type="submit" value="Enter">
+            </form>
+            <div class="route-container new-route">
+                <p class="route-p">New here? Let's <a class="route-a fw-400" href="/register">register</a> to the Dark Side</p>
+            </div>
+        </div>
+
+<%- include('./partials/_footer.ejs') %>
