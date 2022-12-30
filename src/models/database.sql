@@ -17,3 +17,13 @@ CREATE TABLE tasks (
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+INSERT INTO users (name, nickname)
+VALUES ('Fabian B', 'FabsB'),
+('Daniel J', 'dj97'),
+('Andrew A', 'aan07');
+
+INSERT INTO tasks (title, description, user_id)
+VALUES ('Lavar la loza', 'No olvidar hacerlo antes de las 9', 1),
+('Tender cama', 'Intentar con la moneda', 1),
+('Codear', 'Hasta el cansancio', 1);

@@ -1,13 +1,10 @@
 import { pool } from "../db.js";
 
-export const reTasks = (req, res) => {
-    const {nickname} = req.body;
-    res.redirect(`/tasks/${nickname}`);
-}
-
-export const getTasks = (req, res) => {
-    const {nickname} = req.body;
-    res.send(`Hello ${nickname}. You were redirected`);
+export const getTasks = async (req, res) => {
+    const {user_id} = req.params;
+    const [result] = await pool.query('SELECT title, description FROM tasks WHERE user_id = ?', [user_id]);
+    console.log(result);
+    res.send(`Welcome. Your current tasks are ${JSON.stringify(result)}`);
 }
 
 export const createTask = (req, res) => {

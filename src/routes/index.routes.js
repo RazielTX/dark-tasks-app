@@ -6,7 +6,7 @@ const router = Router();
 router.get('/ping', ping);
 
 router.get('/', (req, res) => {
-    res.render('test', {
+    res.render('index', {
         edit: true
     });
 });
