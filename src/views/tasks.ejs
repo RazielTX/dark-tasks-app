@@ -1,0 +1,18 @@
+<%- include('./partials/_header_tasks.ejs') %>
+        
+        <div class="container container-flex tasks">
+            <a href="/createTask/<%=user_id%>">Crear nueva tarea</a>
+            <ul>
+                <% tasks.forEach((task) => { %>
+                    <li>
+                        <h3><%=task.title%></h3>
+                        <p><%=task.description%></p>
+                        <a href="/editTask/<%=task.id%>">Edit</a>
+                        <a href="/delete/<%=task.id%>">Delete</a>
+                    </li>
+                <% }) %>
+            </ul>
+            
+        </div>
+
+<%- include('./partials/_footer.ejs') %>

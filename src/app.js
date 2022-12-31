@@ -1,5 +1,5 @@
 import express from 'express';
-import {dirname, join} from 'path';
+import {dirname, join, normalize} from 'path';
 import { fileURLToPath } from 'url';
 import morgan from 'morgan';
 import indexRouter from './routes/index.routes.js';
@@ -17,9 +17,9 @@ app.set('view engine', 'ejs');
 // Middlewares
 
 app.use(morgan('dev')); // Just for dev purposes - Comment when no needed
-app.use(express.static(join(__dirname, 'public')));
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(express.static(join(__dirname, 'public'))); // Route for static files
+app.use(express.urlencoded({extended: false})); // Middleware that process data coming from the forms
+app.use(express.json()); // Middleware that process the incoming JSON data 
 
 // Middlewares - Routers
 

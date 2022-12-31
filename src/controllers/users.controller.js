@@ -1,11 +1,30 @@
 import { pool } from "../db.js";
 
 export const accessLanding = (req, res) => {
-    res.render('access');
+
+    try {
+        
+        res.render('access');
+
+    } catch {
+        
+        res.status(500).send('Something went wrong');
+
+    }
+    
 }
 
 export const registerLanding = (req, res) => {
-    res.render('register');
+    
+    try {
+        
+        res.render('register');
+
+    } catch {
+        
+        res.status(500).send('Something went wrong');
+
+    }
 }
 
 export const verify = async (req, res) => {

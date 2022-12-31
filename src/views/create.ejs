@@ -1,0 +1,13 @@
+<%- include('./partials/_header.ejs') %>
+
+        <div class="container container-flex">
+            <form class="container-flex container-form" action="/createTask/<%=user_id%>" method="POST">
+                <label class="form-label fw-400" for="title">Title</label>
+                <input type="text" name="title" required minlength="3">
+                <label class="form-label fw-400" for="description">Description*</label>
+                <textarea name="description" required minlength="3"></textarea>              
+                <input type="submit" value="Create">
+            </form>
+        </div>
+
+<%- include('./partials/_footer.ejs') %>
