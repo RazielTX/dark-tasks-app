@@ -13,6 +13,6 @@ router.get('/editTask/:task_id', getUpdatePage);
 
 router.post('/editTask/:task_id', updateTask);
 
-router.get('/delete/:task_id', deleteTask);
+router.get('/tasks/delete/:task_id', deleteTask);
 
 export default router;

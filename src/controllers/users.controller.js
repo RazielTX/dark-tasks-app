@@ -39,7 +39,7 @@ export const verify = async (req, res) => {
             return res.redirect(`/tasks/${user_id}`);
         }
 
-        res.status(404).send('User not found');
+        res.status(404).render('access' , {verification: false});
 
     } catch {
         
@@ -82,4 +82,23 @@ export const createUser = async (req, res) => {
 
 }
 
-export const deleteUser = (req, res) => res.send('User deleted')
+export const deleteUser = async (req, res) => {
+    const {user_id} = req.params;
+
+    await pool.query(
+        `DELETE
+        FROM tasks
+        WHERE user_id = ?`,
+        [user_id]
+    );
+
+    await pool.query(
+        `DELETE
+        FROM users
+        WHERE user_id = ?`,
+        [user_id]
+    );
+
+    res.redirect(`/`);
+
+};

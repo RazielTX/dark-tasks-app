@@ -11,6 +11,6 @@ router.post('/register', createUser);
 
 router.get('/access', accessLanding);
 
-router.delete('/user/delete/:user_id', deleteUser);
+router.get('/user/delete/:user_id', deleteUser);
 
 export default router;

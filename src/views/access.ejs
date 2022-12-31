@@ -7,6 +7,9 @@
                 <input type="text" name="nickname" required minlength="3">
                 <p class="fw-300 sublabel">*It is not case sensitive</p>
                 <input type="submit" value="Enter">
+                <% if(!verification) { %>
+                    <p>User not found</p>
+                <% } %>
             </form>
             <div class="route-container new-route">
                 <p class="route-p">New here? Let's <a class="route-a fw-400" href="/register">register</a> to the Dark Side</p>
