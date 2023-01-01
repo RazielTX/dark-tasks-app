@@ -4,7 +4,7 @@ export const accessLanding = (req, res) => {
 
     try {
         
-        res.render('access');
+        res.render('access', {verification: true});
 
     } catch {
         
@@ -34,16 +34,19 @@ export const verify = async (req, res) => {
         const {nickname} = req.query;
         console.log(nickname);
         const [result] = await pool.query('SELECT user_id FROM users WHERE nickname = ?', [nickname]);
+        console.log('Ya hice el request');
         if(result.length > 0) {
-            const user_id = JSON.stringify(result[0].user_id);
+            const user_id = (result[0].user_id);
             return res.redirect(`/tasks/${user_id}`);
         }
+
+        console.log('No estoy entrando al if');
 
         res.status(404).render('access' , {verification: false});
 
     } catch {
         
-        res.status(500).send('Something went wrong');
+        // res.status(500).send('Something went wrong');
 
     }
 
