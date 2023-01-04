@@ -104,7 +104,7 @@ To keep the code more readable, scalable and maintainable, the routes and the co
 
 This project is currently live in an AWS EC2 instance:
 
-[Dark Tasks](http://3.94.114.229:8080)
+<a href="http://3.94.114.229:8080" target="_blank">Dark Tasks</a>
 
 ### Networking protocols used
 
@@ -120,8 +120,8 @@ This project is currently live in an AWS EC2 instance:
 
 And last but not least, this project is developed by **Fabian Bejarano**.
 
-[LinkedIn](https://www.linkedin.com/in/fabianbejarano/)
-[GitHub - *just in case*](https://github.com/RazielTX)
-[Twitter](https://twitter.com/ThePianistFB)
+<a href="https://www.linkedin.com/in/fabianbejarano/" target="_blank">LinkedIn</a>
+<a href="https://github.com/RazielTX" target="_blank">GitHub - *just in case*</a>
+<a href="https://twitter.com/ThePianistFB" target="_blank">Twitter</a>
 
 Thank you to taking the time to take a look at the project!
