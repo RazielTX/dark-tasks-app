@@ -14,7 +14,7 @@ Welcome to Dark Tasks! This project is being built for educational purposes, to 
 
 The project is in an early stage, hence I will be updating it constantly.
 
-The project is a simple task manager. Currently the project allows to create an user using a unique nickname identification and to create, edit and delete tasks for that user.
+The project is a simple task manager. Currently, the project allows the creation of a user using a unique nickname identification and to create, edit and delete tasks for that user.
 
 ## Technologies used
 
