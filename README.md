@@ -118,6 +118,14 @@ This project is currently live in an AWS EC2 instance:
 - **SSH**: 
     - I use the SSH protocol to connect remotely to the EC2 instance, as well as to connect the instance to GitHub and keep updating it.
 
+## Roadmap
+
+- [ ] Add complete/not completed status for the tasks
+- [ ] Implement priority functions to the tasks
+- [ ] Add filter functionality
+- [ ] Re-structure styles and make them responsive
+- [ ] ...
+
 ## Author
 
 And last but not least, this project is developed by **Fabian Bejarano**.
